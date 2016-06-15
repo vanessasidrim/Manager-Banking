@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.silverlining.system.banking.controller.FXMLDocumentController">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="701.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabPrincipal" text="Página Inicial">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #15334d;">
+                     <children>
+                        <Label fx:id="lblTitulo1" layoutX="82.0" layoutY="155.0" prefHeight="79.0" prefWidth="299.0" text="Manager" textFill="#fffbfb">
+                           <font>
+                              <Font name="Eras Medium ITC" size="73.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTitulo2" layoutX="82.0" layoutY="225.0" prefHeight="79.0" prefWidth="318.0" text="Banking" textFill="#fffbfb">
+                           <font>
+                              <Font name="Eras Medium ITC" size="77.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgPrincipal" fitHeight="213.0" fitWidth="240.0" layoutX="400.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@preview.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabFisica" text="Cadastro Pessoa Física">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle fx:id="rtgFisica" arcHeight="5.0" arcWidth="5.0" fill="#15334d" height="62.0" layoutX="-7.0" layoutY="47.0" stroke="WHITE" strokeType="INSIDE" width="716.0" />
+                        <Label fx:id="lblTituloFisica" layoutX="169.0" layoutY="58.0" prefHeight="41.0" prefWidth="363.0" text="Cadastro Pessoa Física" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Demi ITC" size="34.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNome" layoutX="15.0" layoutY="170.0" prefWidth="267.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtData" layoutX="298.0" layoutY="170.0" prefWidth="94.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="comboSexo" layoutX="407.0" layoutY="170.0" prefHeight="29.0" prefWidth="124.0" />
+                        <ComboBox fx:id="comboEstadoCivil" layoutX="546.0" layoutY="170.0" prefHeight="29.0" prefWidth="140.0" />
+                        <TextField fx:id="txtCPF" layoutX="15.0" layoutY="240.0" prefHeight="29.0" prefWidth="118.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtRG" layoutX="148.0" layoutY="240.0" prefHeight="29.0" prefWidth="118.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtEmail" layoutX="281.0" layoutY="240.0" prefWidth="234.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtFone" layoutX="530.0" layoutY="240.0" prefWidth="155.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtLogradouro" layoutX="15.0" layoutY="310.0" prefWidth="209.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtNum" layoutX="239.0" layoutY="310.0" prefHeight="29.0" prefWidth="57.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtBairro" layoutX="311.0" layoutY="310.0" prefHeight="29.0" prefWidth="142.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtCidade" layoutX="468.0" layoutY="310.0" prefHeight="29.0" prefWidth="141.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="comboUF" layoutX="624.0" layoutY="310.0" prefHeight="29.0" prefWidth="61.0" />
+                        <Label fx:id="lblNome" layoutX="15.0" layoutY="146.0" text="Nome Completo :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblData" layoutX="298.0" layoutY="146.0" text="Data Nasc :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSexo" layoutX="407.0" layoutY="146.0" text="Sexo :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblEstadoCivil" layoutX="546.0" layoutY="146.0" text="Estado Civil :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCPF" layoutX="15.0" layoutY="216.0" text="CPF :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblRG" layoutX="148.0" layoutY="216.0" text="RG :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblEmail" layoutX="281.0" layoutY="216.0" text="E-Mail :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFone" layoutX="530.0" layoutY="216.0" text="Telefone :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblLogradouro" layoutX="15.0" layoutY="286.0" text="Logradouro :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblNum" layoutX="239.0" layoutY="286.0" text="Nº :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblBairro" layoutX="311.0" layoutY="286.0" text="Bairro :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCidade" layoutX="468.0" layoutY="286.0" text="Cidade :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblUF" layoutX="624.0" layoutY="286.0" text="UF :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnSalvar" layoutX="190.0" layoutY="390.0" mnemonicParsing="false" onAction="#salvar_p_fisica" prefHeight="39.0" prefWidth="142.0" text="Salvar" />
+                        <Button fx:id="btnLimpar" layoutX="368.0" layoutY="390.0" mnemonicParsing="false" onAction="#limpar_fisica" prefHeight="39.0" prefWidth="142.0" text="Limpar" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Cadastro Pessoa Juridica">
+              <content>
+                <AnchorPane fx:id="rtgJuridica" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle fx:id="rtgJuridica" arcHeight="5.0" arcWidth="5.0" fill="#15334d" height="62.0" layoutX="-7.0" layoutY="47.0" stroke="WHITE" strokeType="INSIDE" width="716.0" />
+                        <Label fx:id="lblTituloJuridica" layoutX="153.0" layoutY="58.0" text="Cadastro Pessoa Jurídica" textFill="#f8f7f7">
+                           <font>
+                              <Font name="Eras Demi ITC" size="34.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtRazao" layoutX="15.0" layoutY="170.0" prefWidth="328.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtFantasia" layoutX="358.0" layoutY="170.0" prefWidth="328.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtCNPJ" layoutX="15.0" layoutY="240.0" prefWidth="197.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtResponsavel" layoutX="227.0" layoutY="240.0" prefWidth="197.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtEmailJ" layoutX="439.0" layoutY="240.0" prefHeight="29.0" prefWidth="246.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtLogradouroJ" layoutX="15.0" layoutY="310.0" prefWidth="208.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtNumJ" layoutX="238.0" layoutY="310.0" prefWidth="57.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtBairroJ" layoutX="310.0" layoutY="310.0" prefWidth="142.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtCidadeJ" layoutX="467.0" layoutY="310.0" prefWidth="142.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="comboUFJ" layoutX="624.0" layoutY="310.0" prefHeight="29.0" prefWidth="61.0" />
+                        <Label fx:id="lblRazao" layoutX="15.0" layoutY="146.0" text="Razão Social : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFantasia" layoutX="358.0" layoutY="146.0" text="Nome Fantasia : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCNPJ" layoutX="15.0" layoutY="216.0" text="CNPJ : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblResponsavel" layoutX="227.0" layoutY="216.0" text="Responsável Para Contato : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblEmailJ" layoutX="439.0" layoutY="216.0" text="E-Mail : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblLogradouroJ" layoutX="15.0" layoutY="286.0" text="Logradouro : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblNumJ" layoutX="238.0" layoutY="286.0" text="Nº : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblBairroJ" layoutX="310.0" layoutY="286.0" text="Bairro : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCidadeJ" layoutX="467.0" layoutY="286.0" text="Cidade : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblUFJ" layoutX="624.0" layoutY="286.0" text="UF : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnSalvarJ" layoutX="190.0" layoutY="390.0" mnemonicParsing="false" onAction="#salvar_p_juridica" prefHeight="39.0" prefWidth="142.0" text="Salvar" />
+                        <Button fx:id="btnLimparJ" layoutX="368.0" layoutY="390.0" mnemonicParsing="false" onAction="#limpar_juridica" prefHeight="39.0" prefWidth="142.0" text="Limpar" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Cadastro de Contas">
+              <content>
+                <AnchorPane fx:id="rtgConta" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle fx:id="t" arcHeight="5.0" arcWidth="5.0" fill="#15334d" height="62.0" layoutX="-7.0" layoutY="47.0" stroke="#f5f5f5" strokeType="INSIDE" width="716.0" />
+                        <Label fx:id="lblTituloConta" layoutX="195.0" layoutY="58.0" text="Cadastro de Contas" textFill="#fcfafa">
+                           <font>
+                              <Font name="Eras Demi ITC" size="34.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSaldo" layoutX="396.0" layoutY="240.0" prefWidth="137.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtNumConta" layoutX="15.0" layoutY="240.0" prefWidth="239.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtAgencia" layoutX="269.0" layoutY="240.0" prefWidth="112.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="comboBanco" layoutX="358.0" layoutY="170.0" prefHeight="29.0" prefWidth="328.0" />
+                        <ComboBox fx:id="comboTipoConta" layoutX="548.0" layoutY="240.0" prefHeight="29.0" prefWidth="137.0" />
+                        <Label fx:id="lblTitular" layoutX="15.0" layoutY="146.0" text="TItular : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblBanco" layoutX="358.0" layoutY="146.0" text="Banco : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblNumConta" layoutX="15.0" layoutY="216.0" text="Nº da Conta : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblAgencia" layoutX="269.0" layoutY="216.0" text="Agência : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSaldo" layoutX="396.0" layoutY="216.0" text="Saldo : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTipoConta" layoutX="548.0" layoutY="216.0" text="Tipo de Conta : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnSalvarC" layoutX="190.0" layoutY="390.0" mnemonicParsing="false" onAction="#salvar_conta" prefHeight="39.0" prefWidth="142.0" text="Salvar" />
+                        <Button fx:id="btnLimparC" layoutX="368.0" layoutY="390.0" mnemonicParsing="false" onAction="#limpar_contas" prefHeight="39.0" prefWidth="142.0" text="Limpar" />
+                        <ComboBox fx:id="comboTitular" layoutX="15.0" layoutY="170.0" prefHeight="29.0" prefWidth="328.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabFisica1" text="Editar Cadastro">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="220.0">
+                     <children>
+                        <Rectangle fx:id="rtgFisica1" arcHeight="5.0" arcWidth="5.0" fill="#15334d" height="62.0" layoutX="-7.0" layoutY="23.0" stroke="WHITE" strokeType="INSIDE" width="716.0" />
+                        <Label fx:id="lblTituloFisica1" layoutX="239.0" layoutY="34.0" prefHeight="41.0" prefWidth="258.0" text="Editar Cadastro" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Demi ITC" size="34.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNome1" layoutX="15.0" layoutY="205.0" prefWidth="267.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtData1" layoutX="298.0" layoutY="205.0" prefWidth="94.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="comboSexo1" layoutX="407.0" layoutY="205.0" prefHeight="29.0" prefWidth="124.0" />
+                        <ComboBox fx:id="comboEstadoCivil1" layoutX="546.0" layoutY="205.0" prefHeight="29.0" prefWidth="140.0" />
+                        <TextField fx:id="txtCPF1" layoutX="15.0" layoutY="275.0" prefHeight="29.0" prefWidth="118.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtRG1" layoutX="148.0" layoutY="275.0" prefHeight="29.0" prefWidth="118.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtEmail1" layoutX="281.0" layoutY="275.0" prefWidth="234.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtFone1" layoutX="530.0" layoutY="275.0" prefWidth="155.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtLogradouro1" layoutX="15.0" layoutY="345.0" prefWidth="209.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtNum1" layoutX="239.0" layoutY="345.0" prefHeight="29.0" prefWidth="57.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtBairro1" layoutX="311.0" layoutY="345.0" prefHeight="29.0" prefWidth="142.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtCidade1" layoutX="468.0" layoutY="345.0" prefHeight="29.0" prefWidth="141.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="comboUF1" layoutX="624.0" layoutY="345.0" prefHeight="29.0" prefWidth="61.0" />
+                        <Label fx:id="lblNome1" layoutX="15.0" layoutY="181.0" text="Nome Completo :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblData1" layoutX="298.0" layoutY="181.0" text="Data Nasc :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSexo1" layoutX="407.0" layoutY="181.0" text="Sexo :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblEstadoCivil1" layoutX="546.0" layoutY="181.0" text="Estado Civil :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCPF1" layoutX="15.0" layoutY="251.0" text="CPF :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblRG1" layoutX="148.0" layoutY="251.0" text="RG :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblEmail1" layoutX="281.0" layoutY="251.0" text="E-Mail :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFone1" layoutX="530.0" layoutY="251.0" text="Telefone :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblLogradouro1" layoutX="15.0" layoutY="321.0" text="Logradouro :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblNum1" layoutX="239.0" layoutY="321.0" text="Nº :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblBairro1" layoutX="311.0" layoutY="321.0" text="Bairro :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCidade1" layoutX="468.0" layoutY="321.0" text="Cidade :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblUF1" layoutX="624.0" layoutY="321.0" text="UF :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnSalvar1" layoutX="190.0" layoutY="409.0" mnemonicParsing="false" onAction="#edita_pessoa_fisica" prefHeight="39.0" prefWidth="142.0" text="Salvar" />
+                        <Button fx:id="btnLimpar1" layoutX="368.0" layoutY="409.0" mnemonicParsing="false" onAction="#limpar_fisica" prefHeight="39.0" prefWidth="142.0" text="Limpar" />
+                        <Label layoutX="151.0" layoutY="111.0" text="Buscar CPF:">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <ComboBox fx:id="comboEditProf" layoutX="241.0" layoutY="107.0" prefHeight="29.0" prefWidth="150.0" />
+                        <Button fx:id="btnEditFis" layoutX="419.0" layoutY="107.0" mnemonicParsing="false" onAction="#carrega_dados_fisica" text="Editar">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Button>
+                        <Button fx:id="btnExcluirFisi" layoutX="484.0" layoutY="107.0" mnemonicParsing="false" onAction="#excluir_pessoa_fisica" text="Excluir">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Button>
+                        <Line endX="700.0" layoutY="160.0" startX="-100.0" stroke="#15334d" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Relatórios">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#15334d" height="62.0" layoutX="-7.0" layoutY="47.0" stroke="#fcfcfc" strokeType="INSIDE" width="716.0" />
+                        <Label fx:id="lblTituloRelatorio" layoutX="270.0" layoutY="58.0" text="Relatórios" textFill="#fcf9f9">
+                           <font>
+                              <Font name="Eras Demi ITC" size="34.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="checkJuridica" layoutX="211.0" layoutY="180.0" mnemonicParsing="false" prefWidth="115.0" text="Pessoa Jurídica">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="checkCorrente" layoutX="374.0" layoutY="180.0" mnemonicParsing="false" text="Conta Corrente">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="checkFisica" layoutX="48.0" layoutY="180.0" mnemonicParsing="false" prefWidth="115.0" text="Pessoa Física">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="checkPoupanca" layoutX="537.0" layoutY="180.0" mnemonicParsing="false" text="Conta Poupança">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </CheckBox>
+                        <Button fx:id="btnConsultar" layoutX="280.0" layoutY="250.0" mnemonicParsing="false" onAction="#gerar_relatorios" prefHeight="39.0" prefWidth="142.0" text="Consultar" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Sobre">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #e2e3e5;">
+                     <children>
+                        <ImageView fx:id="imgSobre" fitHeight="429.0" fitWidth="426.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblEquipe" layoutX="369.0" layoutY="130.0" prefHeight="54.0" prefWidth="300.0" text="Equipe de Desenvolvimento : ">
+                           <font>
+                              <Font name="Eras Bold ITC" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblAndre" layoutX="369.0" layoutY="184.0" prefHeight="36.0" prefWidth="300.0" text="          André Luiz " textAlignment="CENTER">
+                           <font>
+                              <Font name="Eras Light ITC" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblJanio" layoutX="369.0" layoutY="227.0" prefHeight="36.0" prefWidth="300.0" text="           Jânio Paz" textAlignment="CENTER">
+                           <font>
+                              <Font name="Eras Light ITC" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblVanessa" layoutX="369.0" layoutY="270.0" prefHeight="36.0" prefWidth="300.0" text="     Vanessa Marques" textAlignment="CENTER">
+                           <font>
+                              <Font name="Eras Light ITC" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
